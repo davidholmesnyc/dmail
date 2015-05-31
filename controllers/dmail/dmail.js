@@ -66,11 +66,19 @@ var dmail = function(object){
 
   this.getMessages = function(total){
     var self = this
-    var from = 0
-    var limit = 0
+    
+    if(Number(self.total) <= Math.abs(config.EMAIL_LIMIT) ){
+      var from  = 0
+      var limit = 0
+      
+    }else{
+      var from = self.total
+      var limit = config.EMAIL_LIMIT
+    }
+
     return new Promise(function(resolve, reject){ 
       self.client.listMessages(from,limit, function(err, messages){
-
+        if(err) throw err;
       if(messages)
         resolve(messages)
       if(err)
@@ -84,6 +92,7 @@ var dmail = function(object){
      var self = this 
      self.client.openMailbox(inbox, function(error, info){
       if(error) throw error;
+      self.total = info.count
       console.log("Message count in INBOX: " + info.count);
       resolve(info.count)
      });

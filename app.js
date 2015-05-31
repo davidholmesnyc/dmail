@@ -6,6 +6,7 @@ var _       = require('lodash');
 var Promise = require('bluebird')
 var fs      = Promise.promisifyAll(require("fs"));
 var moment  = require('moment');
+var heapdump = require('heapdump');
 var dir = process.cwd()
 var privateConfigPath =  __dirname+'/_config.js'
 
@@ -188,7 +189,15 @@ io.on('connection', function(socket){
         return this.getInbox("INBOX")
        })
        .then(function(total){
-        io.to(socket.id).emit("status",{percentage:"30",message:"We are importing meta data for <strong>"+total+"</strong> emails"})
+        if(config.EMAIL_LIMIT < 0 || config.EMAIL_LIMIT > 0 ){
+          var totalCount = Math.abs(config.EMAIL_LIMIT)
+        }
+
+        if(Number(this.total) <= Math.abs(config.EMAIL_LIMIT) ){
+          var totalCount = total
+        }
+
+        io.to(socket.id).emit("status",{percentage:"30",message:"We are importing meta data for <strong>"+totalCount+"</strong> emails"})
         console.log("getting inbox data for "+this.account.username)
         return this.getMessages(total)
        })
@@ -208,6 +217,7 @@ io.on('connection', function(socket){
         return this.saveToDB(data)
        })
        .then(function(){
+        
         io.to(socket.id).emit("status",{percentage:"100",message:"Done importing"})
         console.log("done importing")
        })

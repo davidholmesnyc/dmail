@@ -143,3 +143,13 @@
       margin-top: 10px;
       display: block
   }
+
+  .demo-warning{
+    position: absolute;
+    z-index: 10000;
+    width: 50%;
+    bottom: 10px;
+    left: 25%;
+    text-align: center;
+    
+  }
