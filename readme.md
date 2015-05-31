@@ -1,6 +1,16 @@
-# dmail
+# dmail 0.1 Alpha
 Historical Gmail Analytics written in node.js 
 
+##Screenshots 
+
+<img src="screenshots/login.png">
+<br/>
+<img src="screenshots/gmailoauth.png">
+<br/>
+<img src="screenshots/onboard.png">
+<br/>
+<img src="screenshots/dashboard.png">
+<br/>
 
 ##How to install 
 ```
@@ -31,13 +41,10 @@ npm install sqlite3
   "COOKIESECRET":"blklaslknn3i093248021"
 }
 ```
-##Screenshots 
 
-<img src="screenshots/login.png">
-<br/>
-<img src="screenshots/gmailoauth.png">
-<br/>
-<img src="screenshots/onboard.png">
-<br/>
-<img src="screenshots/dashboard.png">
-<br/>
+##Todo 
+Add test units
+add to npm -- install should be as simple as npm install dmail 
+
+
+
