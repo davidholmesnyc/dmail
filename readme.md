@@ -1,4 +1,4 @@
-# dmail 0.1 Alpha
+# Dmail 0.1 Alpha
 Historical Gmail Analytics written in node.js using sqlite3 
 
 ##Screenshots 
