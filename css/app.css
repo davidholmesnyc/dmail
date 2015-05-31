@@ -1,0 +1,145 @@
+   body {
+      font-family: 'Open Sans', sans-serif;
+  }
+
+  .circular {
+      width: 144px;
+      height: 144px;
+      border-radius: 72px;
+      -webkit-border-radius: 72px;
+      -moz-border-radius: 72px;
+      background: url(https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTe_nlK0cQNnwIhzT-c6WGtCw_pJBK3aEW3PlnukJRR8vlETq8b7bcoHo1y) no-repeat;
+  }
+  .modal-backdrop {
+      background-color: white;
+      opacity: 0.3;
+  }
+  .daterange {
+      border: 0px;
+      padding: 10px;
+      font-size: 18px;
+      margin-right: 50px;
+      width: 250px;
+      cursor: pointer;
+  }
+  *:focus {
+      outline: 0px
+  }
+  .modal-chart {
+      height: 200px;
+  }
+  td.email {
+      color: rgb(0, 31, 145);
+      cursor: pointer;
+  }
+  #header {
+      height: 60px;
+      padding: 10 10 10 10px;
+      border-bottom: 1px solid rgb(219, 219, 219);
+      width: 100%;
+      position: fixed: top: 0px;
+      font-size: 12px;
+      font-weight: 100;
+      color: lightGrey
+  }
+  .header-title {
+      float: left;
+      font-size: 36px;
+      color: black;
+      padding-left: 30px
+  }
+  .chart-row {
+      float: left;
+      width: 47%
+  }
+  .dashboard-chart {
+      margin-top: 30px;
+      ;
+      height: 250px;
+  }
+  .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      
+      transform: translate(-50%, -50%);
+      text-align: center;
+  }
+ 
+  .centered h2 {
+      text-align: center;
+  }
+  .input-container {
+      margin-bottom: 10px
+  }
+  .input-container input {
+      height: 30px;
+      font-size: 16px;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      padding: 20px;
+  }
+  *:focus {
+      outline: 0;
+  }
+  .spinner {
+      background: url('../images/spinner.svg') center center no-repeat;
+      min-height: 250px;
+      background-size: contain;
+      position: relative;
+  }
+  .spinner span {
+      position: absolute;
+      font-size: 24px;
+      /* text-align: center; */
+      
+      left: 45%;
+      top: 115px;
+  }
+  #status-update {
+      font-size: 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+  body {
+      font-family: 'Open Sans', sans-serif;
+  }
+  .centered {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      /* bring your own prefixes */
+      
+      transform: translate(-50%, -50%);
+      text-align: center
+  }
+  .centered h2 {
+      text-align: center;
+      font-size: 51px;
+  }
+  .input-container {
+      margin-bottom: 10px
+  }
+  .input-container input {
+      height: 30px;
+      font-size: 16px;
+      border-radius: 15px;
+      border: 1px solid lightgrey;
+      padding: 20px;
+  }
+  *:focus {
+      outline: 0;
+  }
+  .centered .btn-connect {
+      padding: 10px;
+      margin: 10px;
+      background-color: #3D9551;
+      border-color: transparent;
+      padding: 10px;
+      font-size: 18px;
+  }
+  .links a {
+      margin-top: 10px;
+      display: block
+  }

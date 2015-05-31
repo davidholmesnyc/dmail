@@ -1,0 +1,1 @@
+select count(*) as count from emails where `to` = '{{to}}' limit 1

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <title>dMail.io -- Better Gmail Searching</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link href="/css/simple-sidebar.css" rel="stylesheet">
+  <link href="/css/daterangepicker-bs3.css" rel="stylesheet">
+  <link href="/css/app.css" rel="stylesheet">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <link href="//fonts.googleapis.com/css?family=Open+Sans:300italic,300,400italic,400,600italic,600,700italic,700,800italic,800" rel="stylesheet" type="text/css">
+</head>
+
+<div id="wrapper">
+  <!-- Sidebar -->
+  <div id="sidebar-wrapper" style="border-right: 1px solid lightgrey;">
+    <ul class="sidebar-nav" style="padding-right: 45px;" mvc="sidebar">
+      <li class="sidebar-brand">
+        <center style="margin-top:20px"><div class="circular"></div></center>
+      </li>
+      <li style="padding-top: 103px;">
+        <a href="#" style="color:black">Dashboard</a>
+      </li>
+
+      <li style="padding-top: 10px;">
+        <a href="/api/logout" style="color:black">Logout</a>
+      </li>
+    </ul>
+  </div>
+  <!-- /#sidebar-wrapper -->
+  <!-- Page Content -->
+  <div id="page-content-wrapper">
+    <div id="header">
+      <div class="header-title">Dashboard</div>
+      
+        <input type="text" name="daterange" class="daterange pull-right" value="Loading Date Range" />
+      
+      <div class="clearfix"></div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-12 ">
+          <br/>
+          <div class="chart-row">
+          <h4>Total Emails Received By Year</h4>
+          <div id="chart1" class="dashboard-chart"></div>
+          </div>
+
+          <div class="chart-row">
+          <h4>Received By Hour Sent</h4>
+          <div id="chart2" class="dashboard-chart"></div>
+          </div>
+
+          <div class="clearfix"></div>
+          <br/>
+          <br/>
+          <h4>Top Emailers</h4>
+          <div id="topEmailTable"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+<!-- /#page-content-wrapper -->
+</div>
+<!-- /#wrapper -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel"></h4>
+      </div>
+      <div class="modal-body">
+        <h4>Emails by Year</h4>
+        <div id="emailsByYear" class="modal-chart"></div>
+
+        <h4>Emails by Month</h4>
+        <div id="emailsByMonth" class="modal-chart"></div>
+        
+        <h4>Emails by Hour</h4>
+        <div id="emailsByDay" class="modal-chart"></div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/jquery.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.js"></script>
+<script src="js/highcharts.js"></script>
+<script src="js/chart_widget.js"></script>
+<script src="js/build_table.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/daterangepicker.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+
+</html>
