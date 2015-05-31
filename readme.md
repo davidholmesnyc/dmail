@@ -3,15 +3,16 @@ Historical Gmail Analytics written in node.js
 
 
 ##How to install 
-
+```
 git clone https://github.com/davidholmesnyc/dmail.git
 
 cd dmail
 
 npm install sqlite3
-
+```
 
 ##Edit Your config 
+```javascript
 {
   "google":{
     "CLIENTID":"YOUR GOOGLE CLIENT ID ",
@@ -29,8 +30,7 @@ npm install sqlite3
   "DATABASE":"emails.db",
   "COOKIESECRET":"blklaslknn3i093248021"
 }
-
-
+```
 ##Screenshots 
 
 <img src="screenshots/login.png">
