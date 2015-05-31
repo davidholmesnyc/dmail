@@ -6,7 +6,7 @@ var _       = require('lodash');
 var Promise = require('bluebird')
 var fs      = Promise.promisifyAll(require("fs"));
 var moment  = require('moment');
-var heapdump = require('heapdump');
+
 var dir = process.cwd()
 var privateConfigPath =  __dirname+'/_config.js'
 
