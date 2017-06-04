@@ -140,7 +140,7 @@ var dmail = function(object){
       .then(function(data){
         var all = []
         
-        if( isJson(data) ){
+        
           var data = JSON.parse(data)
           for (var i = data.length - 1; i >= 0; i--) {
             var doc =  data[i]
@@ -158,9 +158,10 @@ var dmail = function(object){
               seen:seen,
               mailbox:doc.path,
             })
-            resolve(all)
+            
           };
-        }
+          resolve(all)
+       
         console.log("saved to "+this.fileName)
       })
     })
